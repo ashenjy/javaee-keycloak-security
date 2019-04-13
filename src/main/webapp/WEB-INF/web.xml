@@ -1,7 +1,59 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" metadata-complete="false" version="3.0">
+  <display-name>Restful Web Application</display-name>
+  <context-param>
+    <param-name>resteasy.scan</param-name>
+    <param-value>true</param-value>
+  </context-param>
+  <context-param>
+    <param-name>resteasy.servlet.mapping.prefix</param-name>
+    <param-value>/keycloakDemoService</param-value>
+  </context-param>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <!-- keycloak -->
+
+  <context-param>
+    <param-name>keycloak.config.resolver</param-name>
+    <param-value>com.demo.keycloak.auth.KeycloakAuthResolver</param-value>
+  </context-param>
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>REST endpoints</web-resource-name>
+      <url-pattern>/keycloakDemoService/keycloak-demo/person/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>personAPI</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+
+  <login-config>
+    <auth-method>KEYCLOAK</auth-method>
+    <realm-name>JavaSecurity</realm-name>
+  </login-config>
+
+  <security-role>
+    <role-name>personAPI</role-name>
+  </security-role>
+
+  <!--RestEasy-servlet-->
+
+  <listener>
+    <listener-class>
+      org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
+  </listener>
+
+  <servlet>
+    <servlet-name>resteasy-servlet</servlet-name>
+    <servlet-class>
+      org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>resteasy-servlet</servlet-name>
+    <url-pattern>/keycloakDemoService/*</url-pattern>
+  </servlet-mapping>
+
 </web-app>
