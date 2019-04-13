@@ -1,0 +1,9 @@
+{
+  "realm": "JavaSecurity",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt7ook5d4KY/mPGwTrkXYt0/TnLRsFEJIeAyuNseQHK6Kmq5kkkrd/morAlth1RhEmJzm5CI55ezWMZP7db9cZ7I05l3CwSnImz6fAEai2zI/mNUdDkLhfM/4DODIoMiikGDzAEJZB1dhwCF22gCSMOrXhiSPISSLup2VOXLXlEjLFVITtps3wQgSko/sOXZHNF9rzxSXQ5akPgh9ChEas4BJubJ3cs/IXPBv+9Gq7fEDTDMqhp7WIj9jgfm/07VeJ4xh1nRYIMwRwQGSjWld9uVhcbB5gJM7+CGj6j8oHeNcztCGpOvpqg4RvEbNUfIvtaF1hsW/+NXJLtjF6n43twIDAQAB",
+  "auth-server-url": "http://localhost:8080/auth",
+  "ssl-required": "external",
+  "resource": "keycloak-demo",
+  "public-client": true,
+  "use-resource-role-mappings": true
+}
