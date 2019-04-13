@@ -1,6 +1,6 @@
 {
   "realm": "JavaSecurity",
-  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt7ook5d4KY/mPGwTrkXYt0/TnLRsFEJIeAyuNseQHK6Kmq5kkkrd/morAlth1RhEmJzm5CI55ezWMZP7db9cZ7I05l3CwSnImz6fAEai2zI/mNUdDkLhfM/4DODIoMiikGDzAEJZB1dhwCF22gCSMOrXhiSPISSLup2VOXLXlEjLFVITtps3wQgSko/sOXZHNF9rzxSXQ5akPgh9ChEas4BJubJ3cs/IXPBv+9Gq7fEDTDMqhp7WIj9jgfm/07VeJ4xh1nRYIMwRwQGSjWld9uVhcbB5gJM7+CGj6j8oHeNcztCGpOvpqg4RvEbNUfIvtaF1hsW/+NXJLtjF6n43twIDAQAB",
+  "realm-public-key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2Oj1K8EHWyAkaggvteHnETu3acwn5U8PaU0BixBM1nke5cgNXWE3I5M4zDfmNG2Egub2jmMHyRbF9U10ovQzhE1HhDFN+3ob/+Wz8Dy0ZF6GXAzyWYe64vx1MiDq5764HNQGAv+zSlUD0S7TIbCrw3h9XBJQNqeJsOurpIVu2+M0wxXXOylmIaCVFqf509rMPcdmS+UocZ7+2mAC7eJ5z4u6j5rsBvSK74tKQb7tcJHXcY3TO6owKayUVrdDHnruYhQxQu1x0FeemDrtvv6D7O2FhhOWIBJcvgLyuuyFYH687o/xxaD9Ye+P9SP1NYCbRmlkVQJ3DPs6ibLQkaDr4QIDAQAB",
   "auth-server-url": "http://localhost:8080/auth",
   "ssl-required": "external",
   "resource": "keycloak-demo",
