@@ -25,7 +25,6 @@ public class PersonAPI {
     public Response start(@PathParam("name") String personName, String requestBody,
                           @HeaderParam("Authorization") String authorization, @Context UriInfo uriInfo) {
 
-        int httpResponseCode = 500;
         Map<String, Object> reponseMap = new HashMap<>();
 
         final String path = uriInfo.getAbsolutePath().getPath();
@@ -36,7 +35,7 @@ public class PersonAPI {
         reponseMap.put("SUCESS", true);
         reponseMap.put("PERSON_NAME", personName);
 
-        return Response.status(httpResponseCode).entity(convertMapToJSONString(reponseMap)).header("Content-Type", "application/json")
+        return Response.status(200).entity(convertMapToJSONString(reponseMap)).header("Content-Type", "application/json")
                 .build();
     }
 
